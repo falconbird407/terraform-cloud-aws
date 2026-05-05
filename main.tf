@@ -1,4 +1,4 @@
-resource "aws_instance" "Nima" {
+#resource "aws_instance" "Nima" {
   ami           = var.ami_id
   instance_type = var.instance_type
   key_name      = var.key_name
