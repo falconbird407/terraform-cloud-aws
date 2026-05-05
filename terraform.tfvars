@@ -1,0 +1,6 @@
+region        = "eu-north-1"
+ami_id        = "ami-071df4a41c6f9ee2e"
+instance_type = "t3.micro"
+key_name      = "falconbird"
+machine_name  = "Nima"
+created_by    = "terraform"
