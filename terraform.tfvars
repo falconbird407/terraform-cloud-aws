@@ -1,6 +1,9 @@
-region        = "eu-north-1"
-ami_id        = "ami-071df4a41c6f9ee2e"
+region        = "eu-central-1"
+
 instance_type = "t3.micro"
+
 key_name      = "falconbird"
-machine_name  = "Nima"
+
+machine_name  = "linux-lab"
+
 created_by    = "terraform"
