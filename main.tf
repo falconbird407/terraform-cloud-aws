@@ -49,6 +49,8 @@ resource "aws_instance" "linux_lab" {
     aws_security_group.linux_lab_sg.id
   ]
 
+  user_data = file("${path.module}/bootstrap.sh")
+  
   tags = {
     Name       = var.machine_name
     Created_By = var.created_by
