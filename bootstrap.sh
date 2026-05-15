@@ -1,4 +1,5 @@
 #!/bin/bash
+# version 2
 set -e
 
 apt-get update -y
