@@ -1,9 +1,9 @@
-region        = "eu-central-1"
+region = "eu-central-1"
 
 instance_type = "t3.micro"
 
-key_name      = "falconbird"
+key_name = "falconbird"
 
-machine_name  = "linux-lab"
+machine_name = "linux-lab"
 
-created_by    = "terraform"
+created_by = "terraform"
