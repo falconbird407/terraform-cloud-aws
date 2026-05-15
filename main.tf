@@ -9,9 +9,9 @@ resource "aws_security_group" "linux_lab_sg" {
   ingress {
     description = "SSH"
 
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
 
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -19,17 +19,17 @@ resource "aws_security_group" "linux_lab_sg" {
   ingress {
     description = "HTTP"
 
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
+    from_port = 80
+    to_port   = 80
+    protocol  = "tcp"
 
     cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
 
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -49,8 +49,9 @@ resource "aws_instance" "linux_lab" {
     aws_security_group.linux_lab_sg.id
   ]
 
-  user_data = file("${path.module}/bootstrap.sh")
-  
+  user_data                   = file("${path.module}/bootstrap.sh")
+  user_data_replace_on_change = true
+
   tags = {
     Name       = var.machine_name
     Created_By = var.created_by
